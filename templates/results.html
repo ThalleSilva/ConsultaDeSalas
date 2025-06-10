@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Salas Disponíveis</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="results-container"> <h1>Salas Disponíveis</h1>
+    <h2>Para {{ selected_date }} das {{ start_time }} às {{ end_time }}</h2>
+
+    {% if rooms %}
+      <ul class="results-list">
+        {% for room in rooms %}
+          <li><strong>{{ room.name }}</strong> ({{ room.email }})</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="no-results">Nenhuma sala disponível encontrada para este horário.</p>
+    {% endif %}
+    
+    <div class="search-again-container">
+        <a href="{{ url_for('procurar_salas') }}" class="action-link">Fazer Nova Busca</a>
+    </div>
+  </div>
+</body>
+</html>

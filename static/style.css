@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column; /* Permite que o footer (se houver) vá para baixo */
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 20px; /* Espaço no topo */
+  padding-bottom: 20px; /* Espaço na base */
+  box-sizing: border-box;
+}
+
+/* Container principal para o formulário em home.html */
+.container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  margin: 20px;
+}
+
+/* Container para a página de resultados */
+.results-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px; /* Pode ser mais largo para exibir resultados */
+  margin: 20px auto; /* Centraliza se a largura for menor que a da tela */
+  text-align: center; /* Centraliza o conteúdo do container de resultados */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-align: left; /* Alinha labels à esquerda */
+}
+
+
+input[type="time"],
+input[type="date"]{
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+#typeRoom{
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  width: 100%;
+
+  
+}
+
+button[type="submit"] {
+  padding: 0.75rem;
+  background-color: #3c005f; /* Azul primário */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #28003f; /* Azul mais escuro */
+}
+
+h1 {
+    text-align: center;
+    color: #3c005f; /* Azul escuro para títulos principais */
+    margin-bottom: 1rem; /* Ajuste de margem */
+}
+
+/* Estilo para o subtítulo (data/hora) na página de resultados */
+.results-container h2 {
+    font-size: 1.15rem;
+    color: #374151; /* Cinza escuro */
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+}
+
+/* Lista de salas disponíveis */
+.results-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1rem;
+  text-align: left; /* Alinha o texto dos itens da lista à esquerda */
+}
+
+.results-list li {
+  background-color: #fce0ff; 
+  border: 1px solid #ff9ceb; /* Borda azul clara */
+  padding: 0.85rem 1.25rem;
+  margin-bottom: 0.6rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.results-list li strong {
+    color: #3c005f; /* Destaca o nome da sala */
+}
+
+/* Mensagem para quando não há salas */
+.no-results {
+  color: #4b5563; /* Cinza médio */
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #f9fafb; /* Fundo cinza muito claro */
+  border: 1px solid #e5e7eb; /* Borda cinza clara */
+  border-radius: 8px;
+}
+
+/* Estilo para links de ação (ex: "Fazer Nova Busca", "Login") */
+.action-link, .login-link { /* Unificando ou diferenciando conforme necessidade */
+    display: inline-block;
+    text-align: center;
+    margin-top: 1.5rem; /* Espaçamento acima do link */
+    padding: 0.6rem 1.2rem;
+    color: #3c005f;
+    background-color: #fce0ff; /* Fundo azul muito claro para o link */
+    border: 1px solid #ff9ceb; /* Borda azul clara */
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.action-link:hover, .login-link:hover {
+    background-color: #dbeafe; /* Azul um pouco mais escuro no hover */
+    color: #1e40af;
+    border-color: #e360fa;
+}
+
+/* Container para o link de "Nova Busca" para permitir centralização se necessário */
+.search-again-container {
+    margin-top: 2rem; /* Espaço acima do botão de nova busca */
+    text-align: center;
+}
+
+/* Mensagem de erro */
+.error {
+  color: #991b1b; /* Vermelho escuro para texto */
+  background-color: #fee2e2; /* Fundo vermelho claro */
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #fca5a5; /* Borda vermelha clara */
+  text-align: center;
+  font-size: 0.9rem;
+}
+#logado h1{
+  color: #000000;
+
+}
+  

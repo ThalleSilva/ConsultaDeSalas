@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Verificar Disponibilidade de Salas</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Consultar Salas</h1>
+
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form action="{{ url_for('procurar_salas') }}" method="post">
+      <label for="data">Data:</label>
+      <input type="date" id="data" name="data" value="{{ data_selecionada }}" required>
+
+      <label for="inicio">Horário de Início:</label>
+      <input type="time" id="inicio" name="inicio" value="{{ inicio_val }}" required>
+
+      <label for="fim">Horário de Fim:</label>
+      <input type="time" id="fim" name="fim" value="{{ fim_val }}" required>
+
+      <label for="tipo">Tipo de sala:</label>
+      <select name="typeRoom" id="typeRoom">
+        <option value="cabine">Cabine</option>
+        <option value="sala">Sala de Reunião</option>
+        <option value="todos">Todos</option>
+      </select>
+
+      <button type="submit">Procurar Salas</button>
+    </form>
+
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="Imagem Logo"
+      style="width: 200px; display: block; margin: 20px auto 0;">
+
+  </div>
+</body>
+
+</html>
